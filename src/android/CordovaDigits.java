@@ -69,7 +69,7 @@ public class CordovaDigits extends CordovaPlugin {
         TwitterAuthToken authToken = (TwitterAuthToken) session.getAuthToken();
         DigitsOAuthSigning oauthSigning = new DigitsOAuthSigning(authConfig, authToken);
         Map<String, String> authHeaders = oauthSigning.getOAuthEchoHeadersForVerifyCredentials();
-
+        authHeaders.put("phoneNumber", phoneNumber);
         String result = new JSONObject(authHeaders).toString();
         callbackContext.success(result);
       }
