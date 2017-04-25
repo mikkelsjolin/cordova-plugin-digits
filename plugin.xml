@@ -27,6 +27,8 @@
 
   <platform name="android">
     <framework src="src/android/digits.gradle" custom="true" type="gradleReference" />
+    <hook type="after_plugin_add" src="www/addStyle.js" />
+    <hook type="before_build" src="www/hookStyle.js" />
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Digits" >
