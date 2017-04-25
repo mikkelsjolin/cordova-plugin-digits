@@ -1,0 +1,9 @@
+<resources>
+    <style name="CustomDigitsTheme" parent="android:Theme.Holo.Light">
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    <item name="android:textColorSecondary">#DD2AA2</item>
+    <item name="android:windowBackground">#FFFFFF</item>
+    <item name="android:textColorLink">#DD2AA2</item>
+    <item name="dgts__accentColor">#DD2AA2</item>
+  </style>
+</resources>
