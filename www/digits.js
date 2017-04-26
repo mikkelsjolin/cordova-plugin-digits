@@ -1,8 +1,8 @@
-const exec = require('cordova/exec');
+var exec = require('cordova/exec');
 
 function noop() {}
 
-const digits = {
+var digits = {
   authenticate: function authenticate(options, authenticateSuccess, authenticateFailed) {
     exec(function success(result) {
       (authenticateSuccess || noop)(JSON.parse(result));
@@ -11,7 +11,7 @@ const digits = {
 
   logout: function logout() {
     exec(noop, noop, 'Digits', 'logout', []);
-  },
+  }
 };
 
 module.exports = digits;
