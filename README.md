@@ -4,13 +4,30 @@ This plugin provides native mobile Digits.com integration for both Android and i
 
 ## Installation
 
-This requires cordova 5.0+ (current stable 1.0.1)
+This requires cordova 5.0+ 
 
     cordova plugin add cordova-plugin-digits --variable FABRIC_API_KEY=your_api_key --variable FABRIC_CONSUMER_KEY=your_consumer_key --variable FABRIC_CONSUMER_SECRET=your_consumer_secret
 
-It is also possible to install via repo url directly (unstable)
+It is also possible to install via repo url directly 
 
-    cordova plugin add https://github.com/JimmyMakesThings/cordova-plugin-digits --variable FABRIC_API_KEY=your_api_key --variable FABRIC_CONSUMER_KEY=your_consumer_key --variable FABRIC_CONSUMER_SECRET=your_consumer_secret
+    cordova plugin add https://github.com/ahmedwahba/cordova-plugin-digits --variable FABRIC_API_KEY=your_api_key --variable FABRIC_CONSUMER_KEY=your_consumer_key --variable FABRIC_CONSUMER_SECRET=your_consumer_secret
+
+### Important 
+
+ - put your JSON file `android-digits-config.json` inside the project folder then modify it with your custom colors.
+ 
+      This is example of the JSON object values, you can use only **android native default colors** as a value for  `windowBackground` option such as `white | black | darker_gray` , don't leave any of the options blank nor remove it.
+      
+        {
+            "options": {
+                    "textColor": "#FFFFFF",
+                    "windowBackground": "white",
+                    "buttonColor": "#DD2AA2",
+                    "secondaryColor": "#DD2AA2"
+            }
+        }
+ - After preparing android style file install the plugin with your fabric keys.
+ - You may need to install if missing **xmldom** npm module using `npm install xmldom` or via [xmldom](https://www.npmjs.com/package/xmldom)
 
 ## Supported Platforms
 
@@ -20,6 +37,7 @@ It is also possible to install via repo url directly (unstable)
 ## Methods
 
  - window.plugins.digits.authenticate
+ - window.plugins.digits.logout
 
 ### window.plugins.digits.authenticate
 
@@ -38,20 +56,28 @@ otherwise the `authenticateFailed` is called instead.
 
     // Currently only accentColor and backgroundColor is supported.
     // Note: These have no effect on Android.
-    const options = {
+    var options = {
       accentColor: '#ff0000',
       backgroundColor: '#ffffff',
     };
 
     window.plugins.digits.authenticate(options,
-      (oAuthHeaders) => {
+      function (oAuthHeaders) {
+        // auth headers and phone number 
         console.log(oAuthHeaders);
       },
-      (error) => {
+      function (error) {
         console.warn("[Digits]", "Login failed", error);
       }
     );
 
+### window.plugins.digits.logout
+
+It just clear the current active session.
+
+    window.plugins.digits.logout();
+
+
 ## Contributors
 
-This plugin is based off the work of another plugin: [https://github.com/cosmith/cordova-digits](https://github.com/cosmith/cordova-digits).
+This plugin is based off the work of another plugin: [https://github.com/JimmyMakesThings/cordova-plugin-digits](https://github.com/JimmyMakesThings/cordova-plugin-digits).
