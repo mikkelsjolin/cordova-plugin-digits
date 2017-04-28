@@ -37,9 +37,10 @@
   DGTAuthenticationConfiguration *configuration;
 
   appearance = [[DGTAppearance alloc] init];
-  configuration = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsDefaultOptionMask];
+  configuration = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsEmail];
   configuration.appearance = appearance;
 
+  if ([options objectForKey:@"defaultCountryCode"]) { configuration.phoneNumber =  options objectForKey:@"defaultCountryCode" }
   if ([options objectForKey:@"backgroundColor"]) { appearance.accentColor = [CDVDigits colorFromHexString:[options objectForKey:@"backgroundColor"]]; }
   if ([options objectForKey:@"accentColor"]) { appearance.accentColor = [CDVDigits colorFromHexString:[options objectForKey:@"accentColor"]]; }
 
