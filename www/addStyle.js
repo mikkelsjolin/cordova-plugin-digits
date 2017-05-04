@@ -10,7 +10,7 @@ var path = require('path');
 var DOMParser = require('xmldom').DOMParser;
 var XMLSerializer = require('xmldom').XMLSerializer;
 
-var filestocopy = [{ "android-digits-config.json": "plugins/cordova-plugin-digits/src/android/style/styles.xml" }];
+var filestocopy = [{ "android-digits-config.json": "plugins/cordova-plugin-fabric-digits/src/android/style/styles.xml" }];
 
 filestocopy.forEach(function(obj) {
     Object.keys(obj).forEach(function(key) {
