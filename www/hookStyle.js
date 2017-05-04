@@ -7,7 +7,7 @@
 //
 
 
-var filestocopy = [{ "plugins/cordova-plugin-digits/src/android/style/styles.xml": "platforms/android/res/values/styles.xml" }];
+var filestocopy = [{ "plugins/cordova-plugin-fabric-digits/src/android/style/styles.xml": "platforms/android/res/values/styles.xml" }];
 
 var fs = require('fs');
 var path = require('path');
