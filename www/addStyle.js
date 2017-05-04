@@ -43,6 +43,10 @@ filestocopy.forEach(function(obj) {
             });
             
         }
+      else
+      {
+         console.log("- ERROR while applying custom digits style   ");
+      }
     });
 });
 
