@@ -5,7 +5,7 @@ function noop() {}
 var digits = {
   authenticate: function authenticate(options, authenticateSuccess, authenticateFailed) {
     exec(function success(result) {
-      (authenticateSuccess || noop)(JSON.parse(result));
+      (authenticateSuccess || noop)(result);
     }, authenticateFailed || noop, 'Digits', 'authenticate', [ options ]);
   },
 
