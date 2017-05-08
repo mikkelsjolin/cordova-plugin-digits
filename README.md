@@ -20,7 +20,7 @@ It is also possible to install via repo url directly
       
         {
             "options": {
-                    "textColor": "#FFFFFF",
+                    "textColor": "#ff0000",
                     "windowBackground": "white",
                     "buttonColor": "#DD2AA2",
                     "secondaryColor": "#DD2AA2"
@@ -63,7 +63,8 @@ otherwise the `authenticateFailed` is called instead.
 
     window.plugins.digits.authenticate(options,
       function (oAuthHeaders) {
-        // auth headers and phone number 
+        // auth server token and phone number 
+        // {serverToken:"",phoneNumber:""}
         console.log(oAuthHeaders);
       },
       function (error) {
