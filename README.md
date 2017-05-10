@@ -27,6 +27,7 @@ It is also possible to install via repo url directly
             }
         }
  - After preparing android style file install the plugin with your fabric keys.
+ - Run `cordova build android` command after plugin install.
  - You may need to install if missing **xmldom** npm module using `npm install xmldom` or via [xmldom](https://www.npmjs.com/package/xmldom)
 
 ## Supported Platforms
@@ -50,7 +51,7 @@ otherwise the `authenticateFailed` is called instead.
 
  - **options**: Theming options for iOS.
  - **authenticateSuccess**: The callback that is passed the authenticated info.
- - **geolocationError**: (Optional) The callback that executes if authentication fails.
+ - **authenticateError**: (Optional) The callback that executes if authentication fails.
 
 #### Example
 
