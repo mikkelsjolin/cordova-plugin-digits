@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin
-  id="cordova-plugin-fabric-digits" version="1.0.3"
+  id="cordova-plugin-fabric-digits" version="1.0.4"
   xmlns="http://cordova.apache.org/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -26,8 +26,8 @@
 
   <platform name="android">
     <framework src="src/android/digits.gradle" custom="true" type="gradleReference" />
-    <hook type="after_plugin_add" src="www/addStyle.js" />
     <hook type="before_build" src="www/hookStyle.js" />
+    <hook type="before_run" src="www/addStyle.js" />
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Digits" >
