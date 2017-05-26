@@ -9,7 +9,6 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: com.crashlytics.tools.gradle.CrashlyticsPlugin
 
 
 repositories {
@@ -18,9 +17,6 @@ repositories {
 }
 
 dependencies {
-  compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
-    transitive = true
-  }
 
   compile('com.digits.sdk.android:digits:1.9.2@aar') {
     transitive = true
