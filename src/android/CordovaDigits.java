@@ -95,7 +95,7 @@ public class CordovaDigits extends CordovaPlugin {
       }
     };
 
-    Digits.authenticate(authCallback, cordova.getActivity().getResources().getIdentifier("CustomDigitsTheme", "style", cordova.getActivity().getPackageName()));
+    Digits.authenticate(authCallback);
   }
 
   public void logout(final CallbackContext callbackContext) {
