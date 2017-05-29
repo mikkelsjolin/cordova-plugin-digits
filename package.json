@@ -1,6 +1,7 @@
 {
   "name": "cordova-plugin-fabric-digits",
   "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Digits.com for Cordova (iOS and Android)",
   "cordova": {
     "id": "cordova-plugin-fabric-digits",
@@ -22,8 +23,8 @@
   ],
   "author": "Mikkel Sjølin (Shaolin Bros.)",
   "license": "MIT",
+  "homepage": "https://github.com/mikkelsjolin/cordova-plugin-digits#readme",
   "bugs": {
     "url": "https://github.com/JimmyMakesThings/cordova-plugin-digits/issues"
-  },
-  "homepage": "https://github.com/mikkelsjolin/cordova-plugin-digits#readme"
+  }
 }

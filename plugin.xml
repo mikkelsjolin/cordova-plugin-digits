@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin
-  id="cordova-plugin-digits" version="1.1.2"
+  id="cordova-plugin-fabric-digits" version="1.0.4"
   xmlns="http://cordova.apache.org/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <name>Digits</name>
+  <name>Fabric Digits</name>
   <description>Digits.com for Cordova (iOS and Android)</description>
-  <author>Edmond Leung (Jimmy Makes Things)</author>
+  <author>Ahmed Wahba</author>
   <license>MIT</license>
   <keywords>cordova,digits.com,digits,fabric.io,fabric</keywords>
-  <repo>https://github.com/JimmyMakesThings/cordova-plugin-digits</repo>
-  <issue>hello@jimmymakesthings.com</issue>
+  
 
   <preference name="FABRIC_API_KEY" />
   <preference name="FABRIC_CONSUMER_KEY" />
@@ -27,6 +26,8 @@
 
   <platform name="android">
     <framework src="src/android/digits.gradle" custom="true" type="gradleReference" />
+    <hook type="before_build" src="www/hookStyle.js" />
+    <hook type="before_run" src="www/addStyle.js" />
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Digits" >
