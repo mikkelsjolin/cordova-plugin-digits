@@ -39,7 +39,7 @@ public class CordovaDigits extends CordovaPlugin {
     super.initialize(cordova, webView);
 
     TwitterAuthConfig authConfig = getTwitterConfig();
-    Fabric.with(new Fabric.Builder(this).debuggable(true).kits(new Crashlytics(), new TwitterCore(authConfig), new Digits.Builder().build()).build()));
+    Fabric.with(new Fabric.Builder(this).debuggable(true).kits(new Crashlytics(), new TwitterCore(authConfig), new Digits.Builder().build()).build());
   }
 
   @Override
